@@ -4,7 +4,7 @@ logs
 npm-debug.log*
 
 # Dependency directories
-/node_modules
+node_modules
 
 # Optional npm cache directory
 .npm
@@ -17,3 +17,4 @@ npm-debug.log*
 
 # MacOS files
 .DS_Store
+node_modules
