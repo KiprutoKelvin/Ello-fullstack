@@ -45,7 +45,7 @@ const App = () => {
   };
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: Mamiten</p>;
+  if (error) return <p>Error: 404 </p>;
 
   return (
     <Container>
