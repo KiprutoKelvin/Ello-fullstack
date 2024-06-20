@@ -9,16 +9,6 @@ const StyledCard = styled(Card)(({ theme }) => ({
   backgroundColor: '#f0f0f0'
 }));
 
-// const StyledList = styled(List)(({ theme }) => ({
-//   marginTop: theme.spacing(2),
-//   maxWidth: '70%',
-//   margin: '0 auto',
-// }));
-
-// const StyledListItem = styled(ListItem)(({ theme }) => ({
-//   padding: theme.spacing(5),
-// }));
-
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: '#393939',
   borderRadius: '20px',
