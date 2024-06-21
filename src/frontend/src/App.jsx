@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Grid } from '@mui/material';
 import { gql, useQuery } from '@apollo/client';
 import SearchBar from './components/SearchBar';
 import BookList from './components/BookList';
@@ -45,7 +45,7 @@ const App = () => {
   };
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: 404 </p>;
+  if (error) return <p>Error: 404</p>;
 
   return (
     <Container>
@@ -53,11 +53,20 @@ const App = () => {
         Ello Book
       </Typography>
       <SearchBar onSearch={handleSearch} />
-      <BookList books={searchResults} onAdd={handleAddBook} />
-      <Typography variant="h4" component="h2" gutterBottom>
-        Reading List
-      </Typography>
-      <ReadingList books={readingList} onRemove={handleRemoveBook} />
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Typography variant="h4" component="h2" gutterBottom>
+            Book List
+          </Typography>
+          <BookList books={searchResults} onAdd={handleAddBook} />
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="h4" component="h2" gutterBottom>
+            Reading List
+          </Typography>
+          <ReadingList books={readingList} onRemove={handleRemoveBook} />
+        </Grid>
+      </Grid>
     </Container>
   );
 };
